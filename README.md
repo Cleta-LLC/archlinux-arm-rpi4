@@ -1,21 +1,27 @@
 # archlinux-arm-rpi4
 
-Specific scripts for installing archlinux arm into a raspberry pi 4 64 bits
+Specific script for installing archlinux arm into a raspberry pi 4 64 bits
 
 ## Install
 
-Clone and add execute permissions.
+Clone or download
 
 ```
 $ git clone git@github.com:Cleta-LLC/archlinux-arm-rpi4.git
-$ git chmod +x ./sd_burner.sh
+$ curl -o sd_burner.sh https://raw.githubusercontent.com/Cleta-LLC/archlinux-arm-rpi4/main/sd_burner.sh
+```
+
+Add execute permissions.
+
+```
+$ sudo chmod +x ./sd_burner.sh
 ```
 
 ## Run
 
-## NOTE: THIS WILL ERASE ALL THE TARGET DEV DATA.
+#### NOTE: THIS WILL ERASE ALL THE TARGET DEV DATA.
 
-## NOTE: THIS WILL DOWNLOAD OVER 200MB DATA.
+#### NOTE: THIS WILL DOWNLOAD OVER 200MB DATA.
 
 Locate your sd card by running `lsblk` or similar and run with sudo.
 
