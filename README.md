@@ -4,7 +4,7 @@ Specific script for installing archlinux arm into a raspberry pi 4 64 bits
 
 ## Install
 
-Clone or download
+[Clone](https://github.com/Cleta-LLC/archlinux-arm-rpi4/) with `git` or [Download](https://github.com/Cleta-LLC/archlinux-arm-rpi4/releases) with `curl`. You can also use `wget` or get creative.
 
 ```
 $ git clone git@github.com:Cleta-LLC/archlinux-arm-rpi4.git
@@ -47,4 +47,8 @@ We're looking to expand this script to cache the download on a /tmp/ directory.
 
 ## Support
 
-Feel free to sponsor us.
+Feel free to sponsor us on: [github](https://github.com/sponsors/Cleta-LLC)
+
+Accept cypto donatons to [etherscan](https://etherscan.io/address/0x92516f81d6b9e4caa44e28b339a16907c07221fd) wallet:
+
+    0x92516F81D6B9e4cAa44e28B339a16907C07221fD
