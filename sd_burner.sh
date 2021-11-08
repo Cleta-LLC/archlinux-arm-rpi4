@@ -27,8 +27,8 @@ echo -e -n "Settings:\nSDDEV=${SDDEV}\nBOOT=${SDPARTBOOT}\nROOT=${SDPARTROOT}\nS
 # Download. Never cache.
 mkdir -p $DOWNLOADDIR
 (
-  cd $DOWNLOADDIR && \
-  curl -JLO http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz
+  cd $DOWNLOADDIR #&& \
+  #curl -JLO http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz
 )
 
 # Clean disk
@@ -55,10 +55,9 @@ sed -i 's/mmcblk0/mmcblk1/' ${SDMOUNT}/etc/fstab
 # Headless Boot - Replace Uboot
 mkdir -p ${DOWNLOADDIR}/uboot
 pushd ${DOWNLOADDIR}/uboot
-curl -JLO http://ports.ubuntu.com/pool/universe/u/u-boot/u-boot-rpi_2020.10+dfsg-1ubuntu0~20.04.2_arm64.deb
-ar x *.deb
-tar xf data.tar.xz
-cp usr/lib/u-boot/rpi_arm64/u-boot.bin ${SDMOUNT}/boot/kernel8.img
+curl -JLO https://pkg.freebsd.org/FreeBSD:13:aarch64/latest/All/u-boot-rpi-arm64-2020.10.txz
+tar -xf u-boot-rpi-arm64-2020.10.txz
+cp usr/local/share/u-boot/u-boot-rpi-arm64/u-boot.bin ${SDMOUNT}/boot/kernel8.img
 popd
 
 # Sync and Umount
